@@ -8,17 +8,21 @@
 import Foundation
 
 enum AuthException: Error {
-    case UserNameAlreadyExists(username: String)
+    case UserNameAlreadyExists(_ username: String)
 
-    case PasswordTooShort(username: String)
+    case PasswordTooShort(_ username: String)
 
-    case InvalidUsername(username: String)
+    case InvalidUsername(_ username: String)
 
-    case InvalidPassword(username: String, user: User? = nil)
+    case InvalidPassword(_ username: String, _ user: User? = nil)
 
-    case PermissionError(message: String)
+    case PermissionError(_ message: String)
 
-    case NotLoggedInError(username: String?)
+    case NotLoggedInError(_ username: String?)
 
-    case NotPermittedError(username: String)
+    case NotPermittedError(_ username: String)
+    
+//    func UserNameAlreadyExists(_ username: String) throws {
+//        throw AuthException.UserNameAlreadyExists(username)
+//    }
 }
