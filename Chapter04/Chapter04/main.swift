@@ -7,14 +7,14 @@
 
 import Foundation
 
-print("Enter an Message: ")
-let input = readLine()
+let authenticator = Authenticator()
+let authorizor = Authorizor(authenticator: authenticator)
 
-let auth = Authenticator()
+try authenticator.addUser(username: "joe", password: "joepassword")
+try authorizor.addPermission(permName: "test program")
+try authorizor.addPermission(permName: "change program")
+try authorizor.permitUser(permName: "test program", username: "joe")
 
-do {
-    try auth.addUser(username: input!, password: "123") // todo "try" em que eu tentar tem que ser em um método/funçao que é throws?
-} catch AuthException.UserNameAlreadyExists(let errorMessage) {
-    print(errorMessage)
-}
+
+Editor(authenticator, authorizor).menu()
 

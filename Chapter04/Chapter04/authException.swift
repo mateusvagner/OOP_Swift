@@ -21,8 +21,4 @@ enum AuthException: Error {
     case NotLoggedInError(_ username: String?)
 
     case NotPermittedError(_ username: String)
-    
-//    func UserNameAlreadyExists(_ username: String) throws {
-//        throw AuthException.UserNameAlreadyExists(username)
-//    }
 }

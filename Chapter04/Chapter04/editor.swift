@@ -14,7 +14,7 @@ class Editor {
     
     var username: String? = nil
     
-    init(authenticator: Authenticator, authorizor: Authorizor) {
+    init(_ authenticator: Authenticator, _ authorizor: Authorizor) {
         self.authenticator = authenticator
         self.authorizor = authorizor
     }
@@ -80,15 +80,18 @@ class Editor {
     
         while true {
             print("""
+
                 Please enter a command:
                     type:
                         login for Login
                         test for Test
                         change for Change
                         quit for Quit
+
                 """)
             print("Enter a command: ")
             answer = readLine()!
+            print("")
             
             switch answer {
             case "login":
@@ -102,7 +105,7 @@ class Editor {
             default:
                 print("\(answer) is not a valid option")
             }
-            
+            sleep(UInt32(2.0))
         }
     }
     

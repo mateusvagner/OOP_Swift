@@ -11,7 +11,7 @@ class Authenticator {
     var users: Dictionary = [String: User]()
     
     func addUser(username: String, password: String) throws {
-        if self.users[username] == nil {
+        if self.users[username] != nil {
             throw AuthException.UserNameAlreadyExists("\(username) already exists in users")
         }
         
@@ -35,7 +35,9 @@ class Authenticator {
         return true
     }
     
-    func isLoggedIn(username: String) -> Bool {
+    func isLoggedIn(username: String?) -> Bool {
+        guard let username = username else { return false }
+        
         if users[username] != nil {
             return users[username]!.isLoggedIn
         }

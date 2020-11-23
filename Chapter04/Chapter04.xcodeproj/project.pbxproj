@@ -10,6 +10,9 @@
 		5D04308A256720C1004E0D55 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D043089256720C1004E0D55 /* main.swift */; };
 		5D043092256721EE004E0D55 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D043091256721EE004E0D55 /* user.swift */; };
 		5D0430952567265B004E0D55 /* authException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0430942567265B004E0D55 /* authException.swift */; };
+		5D04309825672C76004E0D55 /* authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D04309725672C76004E0D55 /* authenticator.swift */; };
+		5D53402E256C707700184E42 /* authorizor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53402D256C707700184E42 /* authorizor.swift */; };
+		5D534031256C750500184E42 /* editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D534030256C750500184E42 /* editor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +32,9 @@
 		5D043089256720C1004E0D55 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5D043091256721EE004E0D55 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		5D0430942567265B004E0D55 /* authException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authException.swift; sourceTree = "<group>"; };
+		5D04309725672C76004E0D55 /* authenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authenticator.swift; sourceTree = "<group>"; };
+		5D53402D256C707700184E42 /* authorizor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authorizor.swift; sourceTree = "<group>"; };
+		5D534030256C750500184E42 /* editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				5D043089256720C1004E0D55 /* main.swift */,
 				5D043091256721EE004E0D55 /* user.swift */,
 				5D0430942567265B004E0D55 /* authException.swift */,
+				5D04309725672C76004E0D55 /* authenticator.swift */,
+				5D53402D256C707700184E42 /* authorizor.swift */,
+				5D534030256C750500184E42 /* editor.swift */,
 			);
 			path = Chapter04;
 			sourceTree = "<group>";
@@ -126,8 +135,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D043092256721EE004E0D55 /* user.swift in Sources */,
+				5D04309825672C76004E0D55 /* authenticator.swift in Sources */,
 				5D04308A256720C1004E0D55 /* main.swift in Sources */,
 				5D0430952567265B004E0D55 /* authException.swift in Sources */,
+				5D534031256C750500184E42 /* editor.swift in Sources */,
+				5D53402E256C707700184E42 /* authorizor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

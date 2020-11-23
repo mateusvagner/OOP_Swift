@@ -33,11 +33,12 @@ class Authorizor {
             throw AuthException.InvalidUsername(username)
         }
         
-        permSet.insert(username)
+        permSet.insert(username) // TODO -> no kotlin essa linha funciona
+        permissions[permName]?.insert(username)
     }
     
     func checkPermission(permName: String, username: String?) throws -> Bool {
-        if !self.authenticator.isLoggedIn(username: username!) {
+        if !self.authenticator.isLoggedIn(username: username) {
             throw AuthException.NotLoggedInError(username)
         }
         
@@ -48,7 +49,6 @@ class Authorizor {
         if !permSet.contains(username!) {
             throw AuthException.NotPermittedError(username!)
         } else {
-            print("User have Permission")
             return true
         }
        
