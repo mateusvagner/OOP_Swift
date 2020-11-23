@@ -7,5 +7,14 @@
 
 import Foundation
 
-print("Hello, World!")
+print("Enter an Message: ")
+let input = readLine()
+
+let auth = Authenticator()
+
+do {
+    try auth.addUser(username: input!, password: "123") // todo "try" em que eu tentar tem que ser em um método/funçao que é throws?
+} catch AuthException.UserNameAlreadyExists(let errorMessage) {
+    print(errorMessage)
+}
 
