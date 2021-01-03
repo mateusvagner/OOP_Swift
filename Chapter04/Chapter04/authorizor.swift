@@ -25,7 +25,7 @@ class Authorizor {
     }
     
     func permitUser(permName: String, username: String) throws {
-        guard var permSet = permissions[permName] else {
+        guard var permSet = permissions[permName] else { // TODO -> faz copia do objeto?
             throw AuthException.PermissionError("Permission Does Not Exist.")
         }
         
@@ -33,7 +33,7 @@ class Authorizor {
             throw AuthException.InvalidUsername(username)
         }
         
-        permSet.insert(username) // TODO -> no kotlin essa linha funciona
+//        permSet.insert(username) // TODO -> no kotlin essa linha funciona
         permissions[permName]?.insert(username)
     }
     
