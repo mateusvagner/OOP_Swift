@@ -14,24 +14,20 @@ class Character {
     var italic: Bool
     var underline: Bool
     
-    var characterString: String {
-        getString()
-    }
-    
+    var characterString: String { getString() }
     
     init(character: String, bold: Bool = false, italic: Bool = false, underline: Bool = false) {
         self.character = character
         self.bold = bold
         self.italic = italic
         self.underline = underline
-       
     }
     
     private func  getString() -> String {
         let boldCharacter = bold ? "*" : ""
         let italicCharacter = italic ? "/" : ""
         let underlineCharacter = underline ? "_" : ""
-      
+        
         return boldCharacter + italicCharacter + underlineCharacter + character
     }
 }
