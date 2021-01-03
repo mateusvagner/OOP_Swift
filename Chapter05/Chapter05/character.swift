@@ -19,7 +19,7 @@ class Character {
     }
     
     
-    init(character: String, bold: Bool, italic: Bool, underline: Bool) {
+    init(character: String, bold: Bool = false, italic: Bool = false, underline: Bool = false) {
         self.character = character
         self.bold = bold
         self.italic = italic
